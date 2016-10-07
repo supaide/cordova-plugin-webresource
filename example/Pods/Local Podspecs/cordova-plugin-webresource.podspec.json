@@ -1,0 +1,40 @@
+{
+  "name": "cordova-plugin-webresource",
+  "version": "0.1.0",
+  "summary": "Cordova Web Resource Plugin.",
+  "description": "Cordova Web Resource Plugin cache and upgrade the web resources, include js, css and image files.",
+  "homepage": "https://github.com/supaide/cordova-plugin-webresource",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "cyij": "cyij2006@gmail.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/supaide/cordova-plugin-webresource.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "src/ios/*.{h,m,swift}",
+  "preserve_paths": [
+    "*.md",
+    "docs/**/*.md",
+    "www/*.js",
+    "www/ios/*.js"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "Cordova": [
+      ">= 4.0.0"
+    ],
+    "SSZipArchive": [
+      ">= 1.6.2"
+    ],
+    "AFNetworking": [
+      ">= 3.1"
+    ]
+  }
+}

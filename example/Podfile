@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/supaide/cocoapods.git'
+#use_frameworks!
+
+target 'cordova-plugin-webresource_Example' do
+  pod 'AFNetworking', '~> 3.1'
+  pod 'Cordova', '~> 4.2.1'
+  pod 'SSZipArchive', '~> 1.6.2'
+  pod 'cordova-plugin-webresource', :path => '../'
+
+
+  target 'cordova-plugin-webresource_Tests' do
+    inherit! :search_paths
+  end
+end

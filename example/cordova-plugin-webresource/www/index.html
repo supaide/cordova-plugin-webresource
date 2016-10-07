@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>client</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/spdico.css">
+  </head>
+  <body ontouchstart="">
+      <button id="btn" click="clickW">click me</button>
+    <div id="app"></div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="dist/common.js"></script>
+    <script>
+      if(typeof Promise == "undefined") {
+        ES6Promise.polyfill();
+      }
+    function clickW() {
+        WebResource.echo('hello webresource', function() {console.log(arguments)}, null)
+    }
+    </script>
+    <script>
+        var app = {
+            // Application Constructor
+            initialize: function() {
+                this.bindEvents();
+            },
+            // Bind Event Listeners
+            //
+            // Bind any events that are required on startup. Common events are:
+            // 'load', 'deviceready', 'offline', and 'online'.
+            bindEvents: function() {
+                document.addEventListener('deviceready', this.onDeviceReady, false);
+            },
+            // deviceready Event Handler
+            //
+            // The scope of 'this' is the event. In order to call the 'receivedEvent'
+            // function, we must explicitly call 'app.receivedEvent(...);'
+            onDeviceReady: function() {
+                app.receivedEvent('deviceready');
+                alert('deviceready')
+                WebResource.echo('hello webresource', function() {alert(arguments[0])}, null)
+            
+            },
+            // Update DOM on a Received Event
+            receivedEvent: function(id) {
+                document.addEventListener("resume", this.onResume, false);
+                console.log('Received Event: ' + id);
+            },
+            onResume: function() {
+                alert('onResume');
+            }
+        };
+    
+    app.initialize();
+    </script>
+    <script src="dist/app.js"></script>
+  </body>
+</html>
