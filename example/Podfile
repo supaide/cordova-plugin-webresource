@@ -6,7 +6,7 @@ target 'cordova-plugin-webresource_Example' do
   pod 'AFNetworking', '~> 3.1'
   pod 'Cordova', '~> 4.2.1'
   pod 'SSZipArchive', '~> 1.6.2'
-  pod 'cordova-plugin-webresource', :path => '../'
+  pod 'cordova-plugin-webresource', '~> 0.1.0'
 
 
   target 'cordova-plugin-webresource_Tests' do
