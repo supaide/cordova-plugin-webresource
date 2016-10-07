@@ -2,7 +2,9 @@
 
 ## Requirements
 <a href="https://github.com/apache/cordova-ios" target="_blank">Cordova</a> 4.0.0
+
 <a href="https://github.com/ZipArchive/ZipArchive" target="_blank">SSZipArchive</a> 1.6.2
+
 <a href="https://github.com/AFNetworking/AFNetworking" target="_blank">AFNetworking</a> 3.1
 
 ## Installation
