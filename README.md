@@ -15,8 +15,8 @@ modify Podfile
 source 'https://github.com/supaide/cocoapods.git'
 pod 'cordova-plugin-webresource', '~> 0.1.0'
 ```
-```$
-pod install
+```sh
+$ pod install
 ```
 
 ## Author
